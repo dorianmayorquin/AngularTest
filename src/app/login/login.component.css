@@ -1,0 +1,26 @@
+input[type=text], input[type=password] {
+  margin: 8px 0;
+  width: 100%;
+  padding: 10px;
+}
+
+input.ng-invalid.ng-touched {border-right: 5px solid red}
+input.ng-valid.ng-touched {border-right: 5px solid green}
+
+.LoginBox{
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 0.25em;
+  padding: 10px;
+  color:black;
+}
+
+body
+{
+  padding: 30px;
+}
+
+
+
+
+  

@@ -1,0 +1,29 @@
+<div class="LoginBox">
+  <h1>Login</h1>
+  <form [formGroup]="signInForm" (ngSubmit)="login()">
+    <div>
+      <label>Username</label>
+      <input formControlName="username" type="text">
+      <div style="color:red;" *ngIf="!signInForm.get('username').valid && signInForm.get('username').touched">
+        *Required
+      </div>
+    </div>
+    <div>
+      <label>Password</label>
+      <input formControlName="password" type="password">
+      <div style="color:red;" *ngIf="!signInForm.get('password').valid && signInForm.get('password').touched ">
+        *Required
+      </div>
+    </div>
+
+
+    <button [disabled]="signInForm.invalid" style="border: none;text-align: center;display: inline-block;
+        font-size: 16px;border-radius: 0.25em;cursor: pointer;background-color:lightgreen;
+        padding:10px;" type="submit"> Login</button>
+    &nbsp;&nbsp;&nbsp;
+    <button style="border: none;text-align: center;display: inline-block;font-size: 16px;
+        border-radius: 0.25em;cursor: pointer;background-color:lightsalmon;
+        padding:10px" type="button" (click)="resetForm()"> Cancel</button>
+  </form>
+
+</div>
